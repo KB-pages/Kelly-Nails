@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelly Nails Designer - Super Estilizado</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rosa: "#C13584",
+            rosaclaro: "#e35ba4",
+            preto: "#111111",
+            cinza: "#1f1f1f",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-preto text-white font-sans">
+
+  <header class="w-full bg-cinza/70 backdrop-blur-lg fixed top-0 left-0 z-50 shadow-lg border-b border-rosa/40">
+    <div class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold tracking-widest text-rosa drop-shadow-lg">KELLY NAILS</h1>
+      <nav class="flex gap-6 text-lg">
+        <a href="#servicos" class="hover:text-rosa transition-all">Serviços</a>
+        <a href="#sobre" class="hover:text-rosa transition-all">Sobre</a>
+        <a href="#contato" class="hover:text-rosa transition-all">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="pt-28"></div>
+
+  <section class="relative w-full h-[75vh] flex items-center justify-center overflow-hidden bg-black">
+    <div class="absolute inset-0 bg-gradient-to-b from-rosa/30 to-preto/90"></div>
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200" class="absolute inset-0 w-full h-full object-cover opacity-30" />
+    <div class="relative text-center max-w-2xl px-6">
+      <h2 class="text-4xl md:text-6xl font-extrabold tracking-wider text-white drop-shadow-2xl">
+        Beleza • Estilo • Elegância
+      </h2>
+      <p class="mt-4 text-lg text-gray-200">Cuidando das suas unhas com amor e excelência.</p>
+      <a href="#contato" class="inline-block mt-6 bg-rosa hover:bg-rosaclaro text-white px-8 py-3 rounded-full text-lg shadow-xl transition-all">Agendar Agora</a>
+    </div>
+  </section>
+
+  <section id="servicos" class="max-w-5xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold text-rosa mb-10 text-center tracking-widest">SERVIÇOS</h3>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Aplicação molde F1</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 50,00</p>
+      </div>
+
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Aplicação gel na tips</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 50,00</p>
+      </div>
+
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Banho em gel</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 40,00</p>
+      </div>
+
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Manutenção (banho)</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 35,00</p>
+      </div>
+
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Esmaltação em gel</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 30,00</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="max-w-4xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold text-rosa mb-10 text-center tracking-widest">SOBRE</h3>
+
+    <div class="bg-cinza/60 p-8 rounded-2xl shadow-xl border border-rosa/20">
+      <p class="text-gray-300 leading-relaxed text-lg">
+        Aqui a vibe é simples: unhas bem feitas, muito capricho e zero enrolação. Trabalho com técnicas modernas para deixar suas unhas bonitas, fortes e com aquele toque elegante que faz diferença. Cada cliente é única — e eu trato assim.
+      </p>
+    </div>
+  </section>
+
+  <section id="agendamento" class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h3 class="text-3xl font-bold text-rosa mb-6 tracking-widest">Agende seu Horário</h3>
+
+    <div class="bg-cinza/60 p-8 rounded-2xl shadow-xl border border-rosa/20 max-w-xl mx-auto">
+      <form id="form-agendamento" class="grid gap-4">
+        <input type="text" id="nome" placeholder="Seu nome completo" required class="p-3 rounded-md bg-black/20 placeholder-gray-400" />
+        <input type="date" id="data-input" required class="p-3 rounded-md bg-black/20 placeholder-gray-400" />
+
+        <select id="horario" required class="p-3 rounded-md bg-black/20 placeholder-gray-400">
+          <option value="">Selecione o horário</option>
+          <option value="08:00">08:00</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+        </select>
+
+        <select id="servico" required class="p-3 rounded-md bg-black/20 placeholder-gray-400">
+          <option value="">Escolha o serviço</option>
+          <option value="Aplicação molde F1">Aplicação molde F1 - R$ 50,00</option>
+          <option value="Aplicação gel na tips">Aplicação gel na tips - R$ 50,00</option>
+          <option value="Banho em gel">Banho em gel - R$ 40,00</option>
+          <option value="Manutenção (banho)">Manutenção (banho) - R$ 35,00</option>
+          <option value="Esmaltação em gel">Esmaltação em gel - R$ 30,00</option>
+        </select>
+
+        <button type="submit" class="bg-rosa hover:bg-rosaclaro transition-all px-6 py-3 rounded-full font-semibold shadow-md">Enviar via WhatsApp</button>
+      </form>
+    </div>
+
+    <p class="text-sm text-gray-300 mt-4">Após enviar, você será direcionada(o) para o WhatsApp para confirmar o horário.</p>
+  </section>
+
+  <section id="instagram" class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h3 class="text-3xl font-bold text-rosa mb-10 tracking-widest">INSTAGRAM</h3>
+
+    <a href="https://www.instagram.com/kelly__dy.nails" target="_blank"
+      class="bg-rosa px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-rosaclaro transition-all">
+      Ver perfil no Instagram
+    </a>
+  </section>
+
+  <section id="contato" class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h3 class="text-3xl font-bold text-rosa mb-10 tracking-widest">CONTATO</h3>
+
+    <a href="https://wa.me/5583988079888" target="_blank"
+      class="bg-rosa px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-rosaclaro transition-all">
+      Chamar no WhatsApp
+    </a>
+  </section>
+
+  <footer class="text-center py-6 bg-cinza/80 border-t border-rosa/30 mt-10">
+    <p class="text-gray-400 text-sm">© 2025 Kelly Nails Designer — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Formulário de agendamento: abre WhatsApp com mensagem formatada
+    document.addEventListener('DOMContentLoaded', function(){
+      const form = document.getElementById('form-agendamento');
+      const dataInput = document.getElementById('data-input');
+      
+      // FUNÇÃO PARA SETAR A DATA MÍNIMA (Hoje)
+      function setMinDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Mês de 0 a 11
+        const day = String(today.getDate()).padStart(2, '0');
+        
+        // Formato YYYY-MM-DD
+        const minDate = `${year}-${month}-${day}`;
+        dataInput.setAttribute('min', minDate);
+      }
+
+      // EXECUTA AO CARREGAR
+      if (dataInput) {
+        setMinDate();
+      }
+
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          
+          const nome = document.getElementById('nome').value.trim();
+          // ALTERAÇÃO: A variável 'telefone' foi removida
+          const data = dataInput.value; 
+          const horario = document.getElementById('horario').value;
+          const servico = document.getElementById('servico').value;
+          
+          // Validação de Data (Redundante, mas bom para navegadores que não suportam 'min')
+          const selectedDate = new Date(data);
+          const today = new Date();
+          // Zera horas, minutos, segundos para comparação apenas da data
+          selectedDate.setHours(0,0,0,0);
+          today.setHours(0,0,0,0); 
+
+          if (selectedDate < today) {
+              alert('A data de agendamento não pode ser uma data passada.');
+              return; // Para a execução do formulário
+          }
+
+          const dataFormat = data ? new Date(data).toLocaleDateString('pt-BR') : '';
+
+          // ALTERAÇÃO: O campo 'Telefone' foi removido da mensagem
+          const mensagem = `Olá! Gostaria de agendar um horário.%0A%0A*Nome:* ${encodeURIComponent(nome)}%0A*Data:* ${encodeURIComponent(dataFormat)}%0A*Horário:* ${encodeURIComponent(horario)}%0A*Serviço:* ${encodeURIComponent(servico)}%0A%0APor favor confirme a disponibilidade.`;
+
+          const numero = '5583988079888';
+          window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

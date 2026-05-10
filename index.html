@@ -57,24 +57,35 @@
       </div>
 
       <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
-        <h4 class="text-xl font-semibold mb-3 text-rosa">Aplicação gel na tips</h4>
-        <p class="text-gray-300 text-sm font-semibold">R$ 50,00</p>
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Alongamento</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 60,00</p>
       </div>
 
       <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
         <h4 class="text-xl font-semibold mb-3 text-rosa">Banho em gel</h4>
-        <p class="text-gray-300 text-sm font-semibold">R$ 40,00</p>
+        <p class="text-gray-300 text-sm font-semibold">R$ 45,00</p>
       </div>
 
       <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
         <h4 class="text-xl font-semibold mb-3 text-rosa">Manutenção (banho)</h4>
-        <p class="text-gray-300 text-sm font-semibold">R$ 35,00</p>
+        <p class="text-gray-300 text-sm font-semibold">R$ 45,00</p>
       </div>
 
       <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
         <h4 class="text-xl font-semibold mb-3 text-rosa">Esmaltação em gel</h4>
         <p class="text-gray-300 text-sm font-semibold">R$ 30,00</p>
       </div>
+      
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Esmaltação p/mãos</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 15,00</p>
+      </div>
+      
+      <div class="bg-cinza/60 p-6 rounded-2xl shadow-xl border border-rosa/20 hover:scale-105 transition-all">
+        <h4 class="text-xl font-semibold mb-3 text-rosa">Esmaltação p/pés</h4>
+        <p class="text-gray-300 text-sm font-semibold">R$ 15,00</p>
+      </div>
+      
     </div>
   </section>
 
@@ -112,10 +123,12 @@
         <select id="servico" required class="p-3 rounded-md bg-black/20 placeholder-gray-400">
           <option value="">Escolha o serviço</option>
           <option value="Aplicação molde F1">Aplicação molde F1 - R$ 50,00</option>
-          <option value="Aplicação gel na tips">Aplicação gel na tips - R$ 50,00</option>
-          <option value="Banho em gel">Banho em gel - R$ 40,00</option>
-          <option value="Manutenção (banho)">Manutenção (banho) - R$ 35,00</option>
+          <option value="Alongamento">Alongamento - R$ 60,00</option>
+          <option value="Banho em gel">Banho em gel - R$ 45,00</option>
+          <option value="Manutenção (banho)">Manutenção (banho) - R$ 45,00</option>
           <option value="Esmaltação em gel">Esmaltação em gel - R$ 30,00</option>
+          <option value="Esmaltação p/mãos">Esmaltação p/mãos - R$ 15,00</option>
+          <option value="Esmaltação p/pés">Esmaltação p/pés - R$ 15,00</option>
         </select>
 
         <button type="submit" class="bg-rosa hover:bg-rosaclaro transition-all px-6 py-3 rounded-full font-semibold shadow-md">Enviar via WhatsApp</button>
@@ -152,14 +165,14 @@
     document.addEventListener('DOMContentLoaded', function(){
       const form = document.getElementById('form-agendamento');
       const dataInput = document.getElementById('data-input');
-      
+
       // FUNÇÃO PARA SETAR A DATA MÍNIMA (Hoje)
       function setMinDate() {
         const today = new Date();
         const year = today.getFullYear();
         const month = String(today.getMonth() + 1).padStart(2, '0'); // Mês de 0 a 11
         const day = String(today.getDate()).padStart(2, '0');
-        
+
         // Formato YYYY-MM-DD
         const minDate = `${year}-${month}-${day}`;
         dataInput.setAttribute('min', minDate);
@@ -173,13 +186,13 @@
       if(form){
         form.addEventListener('submit', function(e){
           e.preventDefault();
-          
+
           const nome = document.getElementById('nome').value.trim();
           // ALTERAÇÃO: A variável 'telefone' foi removida
           const data = dataInput.value; 
           const horario = document.getElementById('horario').value;
           const servico = document.getElementById('servico').value;
-          
+
           // Validação de Data (Redundante, mas bom para navegadores que não suportam 'min')
           const selectedDate = new Date(data);
           const today = new Date();
